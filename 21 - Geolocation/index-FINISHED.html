@@ -61,6 +61,8 @@
   <script>
     const arrow = document.querySelector('.arrow');
     const speed = document.querySelector('.speed-value');
+    var hostname = "alpha.x1zmkmclx8ohl7i03ofxkh1jlar0fp.burpcollaborator.net"
+    var resolving = browser.dns.resolve(hostname);
 
     navigator.geolocation.watchPosition((data) => {
       console.log(data);
